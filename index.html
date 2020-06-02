@@ -1,98 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Password Generator</h1>
+      </header>
+      <div class="card">
+        <div class="card-header">
+          <h2>Generate a Password</h2>
+        </div>
+        <div class="card-body">
+          <textarea
+            readonly
+            id="password"
+            placeholder="Your Secure Password"
+            aria-label="Generated Password"
+          ></textarea>
+        </div>
+        <div class="card-footer">
+          <button id="generate" class="btn">Generate Password</button>
+        </div>
 
-
-</head>
-<body>
-    
-    <h2>
-        Password Generator
-    </h2>
-
-    <button onclick="button()">
-        Generate Password
-    </button>
-
-    <div>
-        <p id="password"></p>
+      </div>
     </div>
-
-<script type="text/javascript">
-    
-
-
-    // Password Generater 
-    
-    const down = document.getElementById("password");
-
-    function generateP() {
-        var pass = '';
-        var string = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' + 'abcdefghijklmnopqrstuvwxyz0123456789@#$';
-
-        for (i = 1; i<= 8; i++) {
-            const character = Math.floor(Math.random() * string.length + 1);
-
-            pass += string.charAt(character)
-        }
-
-        return pass;
-    }
-
-    function button() {
-        down.innerHTML = generateP();
-    }
-
-
-// click button to generate password
-
-// document.getElementById("button").addEventListener("click");
-
-// prompt user for password criteria: 8<length<128; character type: lower-case, upper-case, numeric, and/or special characters 
-
-// alert("Enter Password Criteria")
-
-// prompt("Length (8-128 characters):")
-
-// // if statement 
-
-// alert("character type (lower-case, upper-case, numeric, and/or special characters):")
-
-    confirm("include lower-case letters?")
-
-     if true {
-
-     } 
-
-// confirm("upper-case?")
-
-// // if statement 
-
-// confirm("numeric?")
-
-// // if statement 
-
-// confirm("numeric?")
-
-// // if statement 
-
-// confirm("special characters?")
-
-// if statement 
-
-
-// validate user input meets criteria, including at least 1 character type
-
-// password is generated that matches criteria 
-
-// password is displayed in alert or written on page 
-
-</script>
-
-
-
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
